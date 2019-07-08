@@ -1,6 +1,6 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-
+  config.action.mailer.default_url_options = { host: 'nomster-bom.herokuapp.com' }
   # Code is not reloaded between requests.
   config.cache_classes = true
 

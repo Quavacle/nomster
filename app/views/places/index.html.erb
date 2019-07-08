@@ -5,6 +5,7 @@
     <title>Nomster</title>
   </head>
   <body>
+
 <% @places.each do |place| %>
     <div class="booyah-box col-10 offset-1">
         <h1><%= place.name %></h1>
@@ -12,6 +13,10 @@
         <p><%= place.description %></p><br />
     </div>
 
+
 <% end %>
- 
+<div class="offset-5">
+ <%= paginate @places %>
+</div>
+
   </body>

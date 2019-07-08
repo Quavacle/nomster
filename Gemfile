@@ -41,6 +41,14 @@ gem 'bootstrap', '~> 4.3.1'
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
+gem 'activesupport', '>= 4.1.0'
+gem 'kaminari-actionview', '= 1.1.1'
+gem 'kaminari-activerecord', '= 1.1.1'
+gem 'kaminari-core', '= 1.1.1' 
+gem 'kaminari'
+gem 'simple_form'
+gem 'font-awesome-rails'
+gem 'devise'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
