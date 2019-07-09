@@ -1,0 +1,8 @@
+<div class='booyah-box col-10 offset-1'>
+    <h1><%= @place.name %></h1><br />
+    <i><%= @place.address %></i><br /><br />
+    <p><%= @place.description %></p><br />
+    <div class="float-right">
+        <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
+</div>
+     

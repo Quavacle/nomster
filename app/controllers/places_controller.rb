@@ -16,7 +16,21 @@ class PlacesController < ApplicationController
         end
         redirect_to root_path
     end
+    def update
+        @place = Place.find(params[:id])
+        @place.update_attributes(place_params)
+        if @place.valid?
+            flash[:alert] = 'Update successful'
+        end
+        redirect_to root_path
+    end
+    def show
+        @place = Place.find(params[:id])
+    end
 
+    def edit
+        @place = Place.find(params[:id])
+    end     
     private
 
     def place_params
