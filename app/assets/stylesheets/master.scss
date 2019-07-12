@@ -2,7 +2,10 @@
 @import "font-awesome-sprockets";
 @import 'font-awesome';
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
-    
+
+.clear {
+  clear:both;
+}
 #map {
   height: 300px;
 }

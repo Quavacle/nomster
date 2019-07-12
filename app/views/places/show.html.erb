@@ -35,4 +35,23 @@
             <%= link_to 'Delete', place_path(@place), method: :delete, data: {confirm: 'Are you sure you want to delete this place?'}, class: 'btn btn-primary' %>
         <% end %>
 </div>
-     
+
+<div class="clear"></div>
+
+<%= simple_form_for @comment, url: place_comments_path(@place) do |f| %>
+    <%= f.input :message %>
+    <%= f.input :rating %>
+    <%= f.submit "Add a Comment", class: 'btn btn-primary' %>
+<% end %>
+
+<h1>Comments</h1>
+
+<% @place.comments.each do |comment| %>
+    <div class="booyah-box col-10 offset-1"
+        <blockquote>
+            <b><%= comment.rating %></b> -
+            <%= comment.message %>
+            <small><%= comment.user.email %></small>
+        </blockquote>
+    </div>
+<% end %>
