@@ -34,29 +34,33 @@
             <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
             <%= link_to 'Delete', place_path(@place), method: :delete, data: {confirm: 'Are you sure you want to delete this place?'}, class: 'btn btn-primary' %>
         <% end %>
+    </div>
 </div>
-
 <div class="clear"></div>
 
 
+<div class="booyah-box col-10 offset-1">
+<div class="float-left"><h1>Comments</h1></div>
 
-<h1>Comments</h1>
-
+<div class="clear"></div>
+<div class="row">
 <% @place.comments.each do |comment| %>
-    <div class="booyah-box col-10 offset-1">
+    <div class="col-12 col-sm-6">
         <blockquote>
             <% if comment.humanized_rating.present? %>
             <b><%= comment.humanized_rating %></b> -
             <% end %>
             <%= comment.message %>
+            <br />
             <small><%= comment.user.email %></small>
         </blockquote>
     </div>
 <% end %>
+</div>
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Comment
+<button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myModal">
+  Add a comment
 </button>
 
 <!-- Modal -->
@@ -81,6 +85,7 @@
         <%= f.submit "Add a Comment", class: 'btn btn-primary' %></button>
       </div>
       <% end %>
+  </div>
     </div>
   </div>
 </div>
