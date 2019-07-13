@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <%= javascript_include_tag "//maps.google.com/maps/api/js?key=#{ENV['GOOGLE_API_KEY']}" %>
+
     <title>Nomster</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>

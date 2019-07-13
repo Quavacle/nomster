@@ -21,9 +21,8 @@
       });
     }
   </script>
-
   <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7Sno3miZIHb4H1-J4Fs-wSLsE4wpTF-Y&callback=initMap">
+  src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GEOCODER_API_KEY"] %>&callback=initMap">
   </script>
 
   <div id="map"></div>
@@ -89,3 +88,12 @@
     </div>
   </div>
 </div>
+<% @place.photos.each do |photo| %>
+    <%= photo.caption %>
+    <%= image_tag photo.picture %>
+<% end %>
+<%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+  <%= f.input :caption %>
+  <%= f.input :picture %>
+  <%= f.submit "Add a photo", class: 'btn btn-primary' %>
+<% end %>

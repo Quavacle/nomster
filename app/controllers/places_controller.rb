@@ -25,6 +25,7 @@ class PlacesController < ApplicationController
         @place.update_attributes(place_params)
         if @place.valid?     
             flash[:alert] = 'Update successful'
+            redirect_to place_path(@place)
         else
             render :edit, status: :unprocessable_entity
         end
@@ -33,6 +34,7 @@ class PlacesController < ApplicationController
     def show
         @place = Place.find(params[:id])
         @comment = Comment.new
+        @photo = Photo.new
     end
 
     def edit
@@ -41,6 +43,7 @@ class PlacesController < ApplicationController
         if @place.user != current_user
             return render plain: 'Not allowed', status: :forbidden
         end
+        
     end     
     def destroy
         @place = Place.find(params[:id])
