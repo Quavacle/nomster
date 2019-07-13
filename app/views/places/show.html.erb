@@ -90,7 +90,7 @@
 </div>
 <% @place.photos.each do |photo| %>
     <%= photo.caption %>
-    <%= image_tag photo.picture %>
+    <%= image_tag photo.picture.url unless photo.picture.nil? %>
 <% end %>
 <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
   <%= f.input :caption %>
