@@ -1,10 +1,10 @@
 <div class="booyah-box col-10 offset-1">
     <h1>Enter place detais</h1>
-        <%= simple_form_for @place do |f| %>
-            <%= f.input :name, label: "Place you would like to add", placeholder: "Some kitchen" %>
-            <%= f.input :address, label: "Where are they located?", placeholder: "123 That Avenue" %>
-            <%= f.input :description, label: "Please describe your experience", placeholder: "Mediocre at best" %>
-            <br />
-            <%= f.submit 'Create', class: 'btn btn-primary' %>
-        <% end %>
+    <%= simple_form_for @place do |f| %>
+    <%= f.input :name, label: "Place you would like to add", placeholder: "Some kitchen" %>
+    <%= f.input :address, label: "Where are they located?", placeholder: "123 That Avenue" %>
+    <%= f.input :description, label: "Please describe your experience", placeholder: "Mediocre at best" %>
+    <br />
+    <%= f.submit 'Create', class: 'btn btn-primary' %>
+    <% end %>
 </div>
