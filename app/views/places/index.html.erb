@@ -11,7 +11,7 @@
     <h1><%= link_to place.name, place_path(place) %></h1><br />
     <i><%= place.address %></i><br /><br />
     <% place.photos.each do |photo| %>    
-      <img class="photopreview" <%= image_tag photo.picture.url unless photo.picture.nil? %>>   
+      <img class="photopreview" <%= image_tag photo.picture.url unless photo.picture.nil? %>   
     <% end %>
     <br /><br /> 
 
