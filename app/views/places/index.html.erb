@@ -33,10 +33,10 @@
       </a>
     </div>
 
-
+<div class = clear>
 
 <% @places.each do |place| %>
-  <div class='booyah-box col-10 offset-1'style='margin: 10px 0 10px 0'>
+  <div class='booyah-box col-10 offset-1'>
      <div class = "row">
        <div class = "col">
     <h1><%= link_to place.name, place_path(place), data: { turbolinks: false } %></h1><br />
