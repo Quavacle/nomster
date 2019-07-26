@@ -3,6 +3,10 @@
 @import 'font-awesome';
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 
+.carousel-inner > .carousel-item > img, .carousel-inner > .carousel-item > a > img {
+  height: 550px;
+}
+
 div.item {
     vertical-align: top;
     display: inline-block;
@@ -51,12 +55,23 @@ blockquote p {
 #map {
   height: 300px;
 }
-
+.carousel-inner{
+  text-align: center;
+}
+.carousel-inner > .item > img{
+display: block;
+  margin: 0 auto;
+  width: 50%;
+}
+.caro {
+  max-height: 250px;
+  width: auto;
+}
 .booyah-box {
     -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
     -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
     box-shadow: 1px 1px 2px 0 #d0d0d0;
-    background: #fff;
+    background: #f7f7f7;
     border: 1px solid #ccc;
     border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
     margin-top: 10px;
