@@ -4,7 +4,7 @@ class Comment < ApplicationRecord
     validates :message, presence: true
     validates :rating, presence: true
     after_create :send_comment_email
-    
+    paginates_per 4
     RATINGS = {
         'one star': '1_star',
         'two star': '2_stars',

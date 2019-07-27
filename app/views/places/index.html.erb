@@ -47,7 +47,9 @@
       </div>
       <% end %>
         <div class="col">
-       <%= image_tag place.photos.last.picture.url, class: "photopreview" unless place.photos.nil? %> 
+          <%if place.photos.last.present? %>
+       <%= image_tag place.photos.last.picture.url, class: "photopreview" %>
+       <% end %>
       <% if place.comments.present? %>   
         <blockquote>
           <% if place.comments.first.humanized_rating.present? %>
