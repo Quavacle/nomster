@@ -5,43 +5,42 @@
     </div>
     <div class="column">
       <h3>Welcome to your dashboard, <%= @user.email %></h3> <br />
-                <h4> Member since: <%= @user.created_at.strftime("%B %d, %Y")%> </h4>
-        <h4><%= @user.comments.where(rating: '5_stars').count %> total 5 star reviews</h4>
-      </div>
-      <div class="column">
-
-      </div>
+      <h4> Member since: <%= @user.created_at.strftime("%B %d, %Y")%> </h4>
+      <h4><%= @user.comments.where(rating: '5_stars').count %> total 5 star reviews</h4>
     </div>
+    <div class="column">
+    </div>
+  </div> <!-- Row closer -->
+</div> <!-- Box closer -->
+
+<div class="clear"></div>
+
+<div class="row">
+  <div class="booyah-box col-5" style="margin: 5px 2.5% 5px 5%">
+    <div class="float-left"><h3>Comments - <small><%= @user.comments.count %> total</small></h3></div><br /><br />
+
+    <% @user.comments.each do |comment| %>
+    <h4 class="text-center"><%= link_to comment.place.name, place_path(comment.place) %></h4>
+    <blockquote>
+      <% if comment.humanized_rating.present? %>
+      <b><%= comment.humanized_rating %></b> -
+      <% end %>
+      <%= comment.message %>
+      <br />
+      <small><%= comment.user.email %></small>
+    </blockquote>
+    <% end %>   
   </div>
 
-
-    <div class="clear"></div>
-    <div class="row">
-
-      <div class="booyah-box col-5" style="margin: 5px 2.5% 5px 5%">
-        <div class="float-left"><h3>Comments - <small><%= @user.comments.count %> total</small></h3></div><br /> <br />
-        <% @user.comments.each do |comment| %>
-         <h4 class="text-center"><%= link_to comment.place.name, place_path(comment.place) %></h4>
-        <blockquote>
-          <% if comment.humanized_rating.present? %>
-          <b><%= comment.humanized_rating %></b> -
-          <% end %>
-          <%= comment.message %>
-          <br />
-          <small><%= comment.user.email %></small>
-        </blockquote>
-        <% end %>   
-      </div>
-
-      <div class="booyah-box col-5" style="margin: 5px 5% 5px 2.5%">
-        <div class="float-left"><h3>Places - <small><%= @user.places.count %> added</small></h3></div><br /><br />
-        <% @user.places.each do |place| %>
-        <h1><%= link_to place.name, place_path(place), data: { turbolinks: false } %></h1><br />
-        <i><%= place.address %></i><br /><br />
-        <p><%= place.description %></p>
-        <%= image_tag place.photos.last.picture.url, class: "photopreview" unless place.photos.nil? %> 
-      </div>
-    </div> <!-- Row Closer -->
-
-  <% end %>
-</div>
+  <div class="booyah-box col-5" style="margin: 5px 5% 5px 2.5%">
+    <div class="float-left"><h3>Places - <small><%= @user.places.count %> added</small></h3></div><br /><br />
+    <% @user.places.each do |place| %>
+    <h1><%= link_to place.name, place_path(place), data: { turbolinks: false } %></h1><br />
+    <i><%= place.address %></i><br /><br />
+    <p><%= place.description %></p>
+    <%if place.photos.last.present? %>
+    <%= image_tag place.photos.last.picture.url, class: "photopreview" %>
+    <% end %>
+  </div>
+</div> <!-- Row Closer -->
+<% end %>
