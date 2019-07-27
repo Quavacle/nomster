@@ -84,6 +84,22 @@ blockquote p {
     padding: 20px;
 } 
 
+.banner {
+  border-radius: 15px;
+  background: image_url('zigzag.png');
+  color: #0F8397;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#logo {
+  font-size: 100px;
+}
+
+#blurb {
+  font-color: 155 155 155 1;
+  font-style: italic;
+}
+
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;

@@ -4,9 +4,10 @@
   <title>Nomster</title>
 </head>
 <body>
-
-
-    <div id="carouselExampleIndicators" class="carousel slide booyah-box col-10 offset-1" data-ride="carousel" style='margin-top: 10px'>
+<div class = "booyah-box banner col-10 offset-1">
+<div class = "row">
+  <div class = "col-sm">
+    <div id="carouselExampleIndicators" class="carousel" data-ride="carousel" style='margin-top: 10px'>
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -32,7 +33,14 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-
+  </div>
+  <div class = "col-sm">
+    <h1 id="logo"> Nomster </h1>
+    <br />
+    <p id="blurb">Your only sensible destination for snarky reviewers, unedecated critiques, and just trying to find somewhere decent to eat.</p>
+  </div>
+</div>
+</div>
 <div class = clear>
 
 <% @places.each do |place| %>
