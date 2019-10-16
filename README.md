@@ -1,24 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Yelp clone written primarily in the rails framework with Google Maps integration and AWS. Includes user creation and authorization, user dashboard, places, comments, and image uploading.
 
-Things you may want to cover:
+Live on heroku:
+https://nomster-bom.herokuapp.com/
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
