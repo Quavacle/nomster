@@ -42,9 +42,9 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
 gem 'activesupport', '>= 4.2.0'
-gem 'kaminari-actionview', '= 1.1.1'
-gem 'kaminari-activerecord', '= 1.1.1'
-gem 'kaminari-core', '= 1.1.1' 
+gem 'kaminari-actionview', '1.2.1'
+gem 'kaminari-activerecord', '1.2.1'
+gem 'kaminari-core', '1.2.1' 
 gem 'kaminari'
 gem 'simple_form'
 gem 'font-awesome-rails'
