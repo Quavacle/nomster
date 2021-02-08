@@ -51,7 +51,7 @@ gem 'font-awesome-rails'
 gem 'devise'
 gem 'font-awesome-sass', '~> 5.8.1'
 gem 'geocoder'
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 gem 'figaro'
 gem 'fog-aws'
 group :development, :test do
